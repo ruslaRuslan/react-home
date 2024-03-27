@@ -26,6 +26,39 @@ const url = `https://jsonplaceholder.typicode.com/users`
 
 // --------------------------------------------------------------------------------------------------------------
 
+// let componentYarandimi = false
+// const Users = () => {
+//     const [users, setUsers] = useState([])
+
+//     if (componentYarandimi === false) {
+//         axios.get(url).then(({ data }) => {
+//             setUsers(data);
+//             componentYarandimi = true
+//             // console.log();
+//         })
+//     }
+
+
+//     return (
+//         <>
+//             {
+//                 users.map((user) => {
+//                     return <div key={user.id} >
+//                         <h1>{user.username}</h1>
+//                         <p>{user.name}</p>
+
+//                     </div>
+//                 })
+//             }
+//         </>
+//     )
+// }
+
+// export default Users
+
+
+
+
 let componentYarandimi = false
 const Users = () => {
     const [users, setUsers] = useState([])
@@ -34,24 +67,24 @@ const Users = () => {
         axios.get(url).then(({ data }) => {
             setUsers(data);
             componentYarandimi = true
-            // console.log();
+
         })
     }
 
 
     return (
         <>
-          {
-           users.map((user)=>{
-            return <div key={user.id} >
-                <h1>{user.username}</h1>
-            <p>{user.name}</p>
+            {
+                users.map((user) => <div key={user.id} >
+                    <h1>{user.username}</h1>
+                    <p>{user.name}</p>
 
-            </div>
-           })
-          }
+                </div>
+                )
+            }
         </>
     )
 }
 
 export default Users
+
