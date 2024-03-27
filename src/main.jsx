@@ -28,15 +28,34 @@ import './index.css'
 
 // -------------------------------------------------------------------------------------------------------------
 
+// const rootElem = ReactDOM.createRoot(document.getElementById('root'))
+
+// function A(ad) {
+//   return <div>
+//     <h1>Salam {ad} abi</h1>
+//     <p>axsaminiz xeyirli ugurlu olsun</p>
+//   </div>
+// }
+
+// rootElem.render(
+//   A('Ruslan')
+// )
+
+// -------------------------------------------------------------------------------------------------------------
+
 const rootElem = ReactDOM.createRoot(document.getElementById('root'))
 
 function A(ad) {
   return <div>
-    <h1>Salam {ad} abi</h1>
+    <h1>Salam {ad}</h1>
     <p>axsaminiz xeyirli ugurlu olsun</p>
   </div>
 }
 
 rootElem.render(
-  A('Ruslan')
+ <div>
+   {A('Ruslan')},
+  {A('Ali')}
+ </div>
+
 )
