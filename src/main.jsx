@@ -17,11 +17,26 @@ import './index.css'
 
 // -------------------------------------------------------------------------------------------------------------
 
+// const rootElem = ReactDOM.createRoot(document.getElementById('root'))
+// const a = <div>
+//   <h1>Salam abi</h1>
+//   <p>axsaminiz xeyirli ugurlu olsun</p>
+// </div>
+// rootElem.render(
+//   a
+// )
+
+// -------------------------------------------------------------------------------------------------------------
+
 const rootElem = ReactDOM.createRoot(document.getElementById('root'))
-const a = <div>
-  <h1>Salam abi</h1>
-  <p>axsaminiz xeyirli ugurlu olsun</p>
-</div>
+
+function A(ad) {
+  return <div>
+    <h1>Salam {ad} abi</h1>
+    <p>axsaminiz xeyirli ugurlu olsun</p>
+  </div>
+}
+
 rootElem.render(
-a
+  A('Ruslan')
 )
