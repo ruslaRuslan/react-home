@@ -57,6 +57,39 @@ const url = `https://jsonplaceholder.typicode.com/users`
 // export default Users
 
 
+// --------------------------------------------------------------------------------------------------------------
+
+// let componentYarandimi = false
+// const Users = () => {
+//     const [users, setUsers] = useState([])
+
+//     if (componentYarandimi === false) {
+//         axios.get(url).then(({ data }) => {
+//             setUsers(data);
+//             componentYarandimi = true
+
+//         })
+//     }
+
+
+//     return (
+//         <>
+//             {
+//                 users.map((user) =>
+//                 ( <div key={user.id} >
+//                     <h1>{user.username}</h1>
+//                     <p>{user.name}</p>
+
+//                 </div>)
+//                 )
+//             }
+//         </>
+//     )
+// }
+
+// export default Users
+
+// --------------------------------------------------------------------------------------------------------------
 
 
 let componentYarandimi = false
@@ -76,8 +109,14 @@ const Users = () => {
         <>
             {
                 users.map((user) => <div key={user.id} >
-                    <h1>{user.username}</h1>
-                    <p>{user.name}</p>
+                    <h1> <button onClick={() => setUsers(
+                        users.filter((_user) => _user.id !== user.id)
+                    )}>
+
+                        x</button>
+                        {user.username}
+                    </h1>
+
 
                 </div>
                 )
@@ -87,4 +126,3 @@ const Users = () => {
 }
 
 export default Users
-
