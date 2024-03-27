@@ -1,7 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import AppComponent from './App'
-import './index.css'
+// import React from 'react'
+// import ReactDOM from 'react-dom/client'
+// import AppComponent from './App'
+// import './index.css'
 
 
 
@@ -81,13 +81,26 @@ import './index.css'
 // -------------------------------------------------------------------------------------------------------------
 
 
+// const rootElem = ReactDOM.createRoot(document.getElementById('root'))
+
+// rootElem.render(
+//   <div>
+//     <AppComponent ad="ali" />
+//     <AppComponent ad="Ruslan" age={23} />
+
+//   </div>
+// )
+
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ record-02
+
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import AppComponent from './App'
+
 const rootElem = ReactDOM.createRoot(document.getElementById('root'))
 
 rootElem.render(
   <div>
-    <AppComponent ad="ali" />
-    <AppComponent ad="Ruslan" age={23} />
-    
-  </div>
-)
+    <AppComponent />
 
+  </div>)
