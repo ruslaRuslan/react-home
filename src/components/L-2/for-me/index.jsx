@@ -1,14 +1,21 @@
-function Button({title, text}) {
+function Counter() {
+    const [counter, setCounter] = useState(0)
     return (
-        <button
-        onClick={()=>{
-            console.log(text);
-        }}
+        <>
+            <h1>{counter}</h1>
+            <button
+                onClick={() => setCounter(counter + 1)}
+            >+</button>
 
-        >
-            {title}
-        </button>
+            <button
+                onClick={() => setCounter(counter - 1)}>
+                -</button>
+
+            <button
+                onClick={() => console.log(counter)}
+            >console</button>
+
+        </>
     )
 }
-
-export default Button;
+export default App;
