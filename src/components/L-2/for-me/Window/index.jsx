@@ -14,7 +14,7 @@ const Window = () => {
             }} className="window">
                 <div className="window_btn_container">
                     <button
-                        onClick={() => setScale(0.5)}
+                        onClick={() => setScale(scale===1? 0.5 : 1)}
                     >{scale===1 ? "minimize": "maximize"}</button>
                     <button
                         onClick={() => { setIsOpen(false) }}
