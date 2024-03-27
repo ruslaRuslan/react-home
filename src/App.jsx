@@ -17,7 +17,7 @@
 
 // -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-import { useState } from "react";
+// import { useState } from "react";
 
 // function App() {
 //   // let counter = 0
@@ -73,12 +73,12 @@ import { useState } from "react";
 
 // -----------------------------------------------------------------------------------------------------------
 
-
+import Window from "./components/L-2/for-me/Window";
 function App() {
 
   return (
     <>
-      <Counter />
+      <Window />
     </>
   )
 }
