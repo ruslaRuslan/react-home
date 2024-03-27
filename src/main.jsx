@@ -67,13 +67,27 @@ import './index.css'
 
 
 
+// const rootElem = ReactDOM.createRoot(document.getElementById('root'))
+
+// rootElem.render(
+//   <div>
+//     <AppComponent ad="ali" />
+//     <AppComponent ad="Ruslan" age={23} />
+
+//   </div>
+// )
+
+
+// -------------------------------------------------------------------------------------------------------------
+
+
 const rootElem = ReactDOM.createRoot(document.getElementById('root'))
 
 rootElem.render(
   <div>
     <AppComponent ad="ali" />
     <AppComponent ad="Ruslan" age={23} />
-
+    
   </div>
 )
 
