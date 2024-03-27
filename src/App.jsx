@@ -1,5 +1,7 @@
 // import Home from "./Home";
 
+// import { useState } from "react";
+
 
 // function AppComponent(props) {
 //   return <div>
@@ -15,24 +17,25 @@
 
 // -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-
+import { useState } from "react";
 
 function App() {
-  let counter = 0
+  // let counter = 0
+  const [counter, setCounter] = useState(0)
   return (
     <>
       <h1>{counter}</h1>
       <button
-        onClick={() => counter++}>
+        onClick={() => setCounter(counter + 1)}>
         +</button>
 
       <button
-        onClick={() => counter--}>
+        onClick={() => setCounter(counter - 1)}>
         -</button>
 
       <button
         onClick={() => console.log(counter)}
-        >console</button>
+      >console</button>
 
     </>
   )
