@@ -175,19 +175,30 @@ let componentYarandimi = false
 const Users = () => {
     const [users, setUsers] = useState([])
     const [isDark, setIsDark] = useState(false)
+
+
+
+
+
     if (componentYarandimi === false) {
         axios.get(url).then(({ data }) => {
             setUsers(data);
             componentYarandimi = true
-
+            let fromStorage = localStorage.getItem('isDark')
+            setIsDark(fromStorage==='true' ? true : false)
         })
+
+
     }
 
-    // 12:25
     return (
-        <div className={isDark ? "darkContainer": null}
+        <div className={isDark ? "darkContainer" : null}
         >
-            <button onClick={() => setIsDark(!isDark)}
+            <button
+                onClick={() => {
+                    setIsDark(!isDark)
+                    localStorage.setItem('isDark', !isDark)
+                }}
             >{isDark ? '☀' : '🥮'}
             </button>
 
