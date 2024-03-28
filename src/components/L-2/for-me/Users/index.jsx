@@ -92,10 +92,89 @@ const url = `https://jsonplaceholder.typicode.com/users`
 // --------------------------------------------------------------------------------------------------------------
 
 
+// let componentYarandimi = false
+// const Users = () => {
+//     const [users, setUsers] = useState([])
+
+//     if (componentYarandimi === false) {
+//         axios.get(url).then(({ data }) => {
+//             setUsers(data);
+//             componentYarandimi = true
+
+//         })
+//     }
+
+
+//     return (
+//         <>
+//             {
+//                 users.map((user) => <div key={user.id} >
+
+//                     <h1> <button onClick={() => setUsers(
+
+//                         users.filter((_user) => _user.id !== user.id)
+
+//                     )}>
+
+//                         x</button>
+//                         {user.username}
+//                     </h1>
+
+
+//                 </div>
+//                 )
+//             }
+//         </>
+//     )
+// }
+
+// export default Users
+
+// --------------------------------------------------------------------------------------------------------------
+
+
+// let componentYarandimi = false
+// const Users = () => {
+//     const [users, setUsers] = useState([])
+
+//     if (componentYarandimi === false) {
+//         axios.get(url).then(({ data }) => {
+//             setUsers(data);
+//             componentYarandimi = true
+
+//         })
+//     }
+
+
+//     return (
+//         <>
+//             {
+//                 users.map((user) => <div key={user.id} >
+
+//                     <h1>
+//                         <button onClick={() => setUsers(users.filter((_user) => _user.id !== user.id))}>
+//                             x</button>
+//                         {user.username}
+//                     </h1>
+
+
+//                 </div>
+//                 )
+//             }
+//         </>
+//     )
+// }
+
+// export default Users
+
+// --------------------------------------------------------------------------------------------------------------
+
+import "./index.css"
 let componentYarandimi = false
+
 const Users = () => {
     const [users, setUsers] = useState([])
-
+    const [isDark, setIsDark] = useState(false)
     if (componentYarandimi === false) {
         axios.get(url).then(({ data }) => {
             setUsers(data);
@@ -104,16 +183,21 @@ const Users = () => {
         })
     }
 
-
+    // 12:25
     return (
-        <>
+        <div className={isDark ? "darkContainer": null}
+        >
+            <button onClick={() => setIsDark(!isDark)}
+            >{isDark ? '☀' : '🥮'}
+            </button>
+
+
             {
                 users.map((user) => <div key={user.id} >
-                    <h1> <button onClick={() => setUsers(
-                        users.filter((_user) => _user.id !== user.id)
-                    )}>
 
-                        x</button>
+                    <h1>
+                        <button onClick={() => setUsers(users.filter((_user) => _user.id !== user.id))}>
+                            x</button>
                         {user.username}
                     </h1>
 
@@ -121,7 +205,7 @@ const Users = () => {
                 </div>
                 )
             }
-        </>
+        </div>
     )
 }
 
